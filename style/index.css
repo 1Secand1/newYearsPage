@@ -1,0 +1,185 @@
+body {
+  background-image: url(/img/1691846388_gagaru-club-p-otkritka-novii-god-minimalizm-krasivo-81.png);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 100%;
+  min-height: 100vh;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.ChristmasTree {
+}
+
+.snow {
+  width: 100%;
+}
+
+.compassion {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.st0 {
+  fill: #332c28;
+}
+
+.st1 {
+  fill: #00513e;
+}
+
+.st2 {
+  fill: #003828;
+}
+
+.st3 {
+  fill: #386fb1;
+}
+
+.st4 {
+  fill: #28527c;
+}
+
+.st5 {
+  fill: #ea385c;
+}
+
+.st6 {
+  fill: #e7b75c;
+}
+
+.st7 {
+  fill: #b28947;
+}
+
+.christmas-toy {
+  cursor: pointer;
+}
+
+#tree {
+  position: absolute;
+  bottom: 25%;
+
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.red {
+  fill: #ff0000;
+}
+
+.red--animation.active {
+  animation: red-flash 1.2s ease-in-out infinite;
+}
+
+@keyframes red-flash {
+  0% {
+    fill: #862c42;
+  }
+  50% {
+    fill: #ff0000;
+  }
+  100% {
+    fill: #862c42;
+  }
+}
+
+.gold-lt {
+  fill: #ffb90f;
+}
+
+.gold-lt--animation.active {
+  animation: gold-lt-flash 1.2s ease-in-out infinite;
+}
+
+@keyframes gold-lt-flash {
+  0% {
+    fill: #96841c;
+  }
+  50% {
+    fill: #ffb90f;
+  }
+  100% {
+    fill: #96841c;
+  }
+}
+
+.blue-lt {
+  fill: #007fff;
+}
+
+.blue-lt--animation.active {
+  animation: blue-lt-flash 1.2s ease-in-out infinite;
+}
+
+@keyframes blue-lt-flash {
+  0% {
+    fill: #3f6482;
+  }
+  50% {
+    fill: #007fff;
+  }
+  100% {
+    fill: #3f6482;
+  }
+}
+
+.blue-dk {
+  fill: #2a5fff;
+}
+.blue-dk--animation.active {
+  animation: blue-dk-flash 1.2s ease-in-out infinite;
+}
+
+@keyframes blue-dk-flash {
+  0% {
+    fill: #00006f;
+  }
+  50% {
+    fill: #2a5fff;
+  }
+  100% {
+    fill: #00006f;
+  }
+}
+
+.gold-dk {
+  fill: #ffb90f;
+}
+.gold-dk--animation.active {
+  animation: gold-dk-flash 1.2s ease-in-out infinite;
+}
+
+@keyframes gold-dk-flash {
+  0% {
+    fill: #756404;
+  }
+  50% {
+    fill: #ffb90f;
+  }
+  100% {
+    fill: #756404;
+  }
+}
+
+.g1 {
+  animation-delay: 0s;
+}
+
+.g2 {
+  animation-delay: 0.4s;
+}
+
+.g3 {
+  animation-delay: 0.8s;
+}
