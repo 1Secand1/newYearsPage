@@ -5,17 +5,17 @@ const green = "#008000";
 
 colorPassword("christmas-toy", [red, silver, blue, green], {
   christmasToy2: silver,
-  // christmasToy6: blue,
-  // christmasToy11: red,
-  // christmasToy8: red,
-  // christmasToy4: silver,
-  // christmasToy9: red,
-  // christmasToy5: blue,
-  // christmasToy10: red,
-  // christmasToy1: blue,
-  // christmasToy12: green,
-  // christmasToy3: red,
-  // christmasToy7: blue,
+  christmasToy6: blue,
+  christmasToy11: red,
+  christmasToy8: red,
+  christmasToy4: silver,
+  christmasToy9: red,
+  christmasToy5: blue,
+  christmasToy10: red,
+  christmasToy1: blue,
+  christmasToy12: green,
+  christmasToy3: red,
+  christmasToy7: blue,
 });
 
 countdownToTheNewYear("days", "hour");
@@ -49,7 +49,7 @@ function colorPassword(
 
     // localStorage.setItem("mysterySolved", " ");
 
-    openModalWindow();
+    modalWindowSwitch();
 
     christmasToys.forEach((element) => {
       element.classList.add("active");
