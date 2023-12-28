@@ -7,13 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/index.css">
   <link rel="stylesheet" href="style/normalize.css">
-  <!-- <script type="text/javascript" src="snow.js"></script> -->
+  <script type="text/javascript" src="snow.js"></script>
   <script defer type="text/javascript" src="script.js"></script>
 
-  <title>Document</title>
+  <title>C Новым годом</title>
 </head>
 
 <body class="background-image">
+  <h2 class="title">
+    До нового года осталось <span id="days"> * </span> дня и <span id="hour"> * </span> часa а герлянда на ёлке не
+    работает.
+    Попробуй покрутить лампочки это должно помочь.
+  </h2>
   <div class="compassion">
 
     <svg id="tree" xmlns="http://www.w3.org/2000/svg" version="1.1" id="Layer_1" x="0" y="0"
@@ -27,31 +32,38 @@
       </g>
       <g id="lights">
         <g>
-          <circle class="christmas-toy blue-lt blue-lt--animation g1" cx="-1575" cy="706.1" r="9" />
-          <circle class="christmas-toy blue-lt blue-lt--animation g2" cx="-1621.3" cy="641" r="7" />
-          <circle class="christmas-toy blue-lt blue-lt--animation g3" cx="-1665.5" cy="732.8" r="7" />
-          <circle class="christmas-toy blue-lt blue-lt--animation g1" cx="-1600.3" cy="668.5" r="7" />
-        </g>
-        <g>
-          <circle id="christmasToy1" class="christmas-toy blue-dk blue-dk--animation g3" cx="-1598.3" cy="550.8"
-            r="7" />
-          <circle class="christmas-toy blue-dk blue-dk--animation g1" cx="-1538" cy="718.6" r="7" />
-          <circle id="christmasToy3" class="christmas-toy blue-dk blue-dk--animation g2" cx="-1594.8" cy="610.3"
+          //1
+          <circle id="christmasToy1" class="christmas-toy blue-lt blue-lt--animation g1" cx="-1561" cy="686.1" r="9" />
+          <circle id="christmasToy3" class="christmas-toy blue-lt blue-lt--animation g3" cx="-1625.5" cy="722.8"
             r="7" />
         </g>
+
         <g>
-          <circle class="christmas-toy red g1 red--animation " cx="-1570.3" cy="634" r="9" />
-          <circle class="christmas-toy red g2 red--animation " cx="-1638" cy="681.7" r="9" />
-          <circle class="christmas-toy red g3 red--animation " cx="-1607.3" cy="711.6" r="7" />
+          //2
+          <circle id="christmasToy2" class="christmas-toy blue-dk blue-dk--animation g3" cx="-1585" cy="550.8" r="7" />
+          <circle id="christmasToy7" class="christmas-toy blue-dk blue-dk--animation g1" cx="-1550" cy="727.6" r="7" />
+          <circle id="christmasToy5" class="christmas-toy blue-dk blue-dk--animation g2" cx="-1603.8" cy="610.3"
+            r="7" />
         </g>
+
         <g>
-          <circle id="christmasToy2" class="christmas-toy gold-lt gold-lt--animation g1" cx="-1612.3" cy="585.8"
+          //3
+          <circle id="christmasToy4" class="christmas-toy red g1 red--animation " cx="-1585" cy="640" r="9" />
+          <circle id="christmasToy9" class="christmas-toy red g2 red--animation " cx="-1615" cy="669" r="9" />
+          <circle id="christmasToy10" class="christmas-toy red g3 red--animation " cx="-1598" cy="695" r="7" />
+        </g>
+
+        <g>
+          //4
+          <circle id="christmasToy6" class="christmas-toy gold-lt gold-lt--animation g1" cx="-1612.3" cy="585.8"
             r="9" />
-          <circle class="christmas-toy gold-lt gold-lt--animation g2" cx="-1631.6" cy="705.6" r="7" />
+          <circle id="christmasToy11" class="christmas-toy gold-lt gold-lt--animation g2" cx="-1645" cy="689" r="7" />
         </g>
+
         <g>
-          <circle class="christmas-toy gold-dk gold-dk--animation g2" cx="-1572.3" cy="604.7" r="7" />
-          <circle class="christmas-toy gold-dk gold-dk--animation g3" cx="-1561.3" cy="681.7" r="7" />
+          //5
+          <circle id="christmasToy8" class="christmas-toy gold-dk gold-dk--animation g2" cx="-1572" cy="604" r="7" />
+          <circle id="christmasToy12" class="christmas-toy gold-dk gold-dk--animation g3" cx="-1535" cy="700" r="5" />
         </g>
       </g>
       <polygon class="st6" points="-1600.5 499.9 -1618.1 499.9 -1603.8 510.3 -1609.3 527 -1595 516.7 -1595 483.2 " />
@@ -72,4 +84,30 @@
 
   </div>
 
+  <section id="modalWindow" class="modalWindow-background">
+
+    <div class="modalWindow">
+      <button class="modalWindow-close " onclick="modalWindowSwitch()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M9 0C4.037 0 0 4.038 0 9C0 13.962 4.037 18 9 18C13.963 18 18 13.962 18 9C18 4.038 13.963 0 9 0ZM9 16C5.141 16 2 12.86 2 9C2 5.14 5.141 2 9 2C12.859 2 16 5.14 16 9C16 12.86 12.859 16 9 16ZM9.707 9L12.353 6.354C12.4462 6.25998 12.4986 6.13292 12.4986 6.0005C12.4986 5.86808 12.4462 5.74102 12.353 5.647C12.259 5.55375 12.1319 5.50143 11.9995 5.50143C11.8671 5.50143 11.74 5.55375 11.646 5.647L9 8.293L6.354 5.646C6.2597 5.55492 6.1334 5.50452 6.0023 5.50566C5.8712 5.5068 5.74579 5.55939 5.65309 5.65209C5.56039 5.7448 5.5078 5.8702 5.50666 6.0013C5.50552 6.1324 5.55592 6.2587 5.647 6.353L8.293 9L5.647 11.646C5.55311 11.7398 5.50032 11.867 5.50022 11.9996C5.50013 12.1323 5.55275 12.2596 5.6465 12.3535C5.74025 12.4474 5.86746 12.5002 6.00015 12.5003C6.13283 12.5004 6.26011 12.4478 6.354 12.354L9 9.707L11.646 12.353C11.6921 12.4008 11.7472 12.439 11.8081 12.4653C11.8691 12.4916 11.9347 12.5054 12.0011 12.5061C12.0675 12.5068 12.1333 12.4942 12.1948 12.4692C12.2563 12.4441 12.3122 12.4071 12.3592 12.3602C12.4062 12.3133 12.4434 12.2575 12.4686 12.1961C12.4938 12.1347 12.5066 12.0689 12.5061 12.0025C12.5056 11.9361 12.4919 11.8705 12.4658 11.8095C12.4397 11.7484 12.4017 11.6932 12.354 11.647L9.707 9Z"
+              fill="white" />
+          </svg>
+      </button>
+      <p>Радостная новость! Праздничное настроение спасено, герлянда снова светится благодаря твоим усилиям.</p>
+      <br>
+
+      <p>
+        Хочу поздравить тебя с наступающим новым годом! Пожелаю, чтобы все проблемы и неприятности, которые накопились
+        за этот год, остались в прошлом, и в новом году тебя ждали только радость, успехи и благополучие. Желаю тебе
+        множество впечатлений и радостных моментов в новом году! Пусть каждый день будет наполнен яркими впечатлениями и
+        радостью.
+      </p>
+
+      <div class="">
+        <img class="modalWindow-img" src="./img/tg.png" alt="">
+      </div>
+    </div>
+  </section>
 </body>

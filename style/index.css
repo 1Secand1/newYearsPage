@@ -1,12 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
 body {
-  background-image: url(/img/1691846388_gagaru-club-p-otkritka-novii-god-minimalizm-krasivo-81.png);
+  background-image: url(../img/1691846388_gagaru-club-p-otkritka-novii-god-minimalizm-krasivo-81.png);
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
 
   width: 100%;
   min-height: 100vh;
+}
+
+.title {
+  color: white;
+  text-align: center;
+
+  max-width: 1050px;
+  margin-inline: auto;
+  margin-top: 20px;
+
+  padding-inline: 12px;
+
+  font-family: Montserrat;
 }
 
 .background-image {
@@ -27,6 +42,57 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+}
+
+.modalWindow-background {
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+
+  background: #00000057;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modalWindow-background.active {
+  display: flex;
+}
+
+.modalWindow {
+  position: absolute;
+  width: 500px;
+  min-height: 500px;
+
+  border-radius: 10px;
+  background: #005c97;
+
+  padding: 16px;
+
+  font-size: 18px;
+  color: white;
+
+  font-family: "Montserrat";
+}
+
+.modalWindow-close {
+  display: grid;
+  place-items: center;
+
+  width: 30px;
+  margin-left: auto;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modalWindow-img {
+  display: block;
+  width: 200px;
+  margin-inline: auto;
 }
 
 .st0 {
@@ -69,7 +135,7 @@ body {
   position: absolute;
   bottom: 25%;
 
-  max-width: 400px;
+  max-width: 50vh;
   display: block;
   margin: 0 auto;
 }
@@ -182,4 +248,10 @@ body {
 
 .g3 {
   animation-delay: 0.8s;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 20px;
+  }
 }

@@ -1,8 +1,37 @@
-colorPassword("christmas-toy", ["#ff0000", "#ffb90f", "#007fff"], {
-  christmasToy1: "#ff0000",
-  christmasToy2: "#ff0000",
-  christmasToy3: "#ff0000",
+const red = "#ff0000";
+const blue = "#007fff";
+const silver = "#c5c9c7";
+const green = "#008000";
+
+colorPassword("christmas-toy", [red, silver, blue, green], {
+  christmasToy2: silver,
+  // christmasToy6: blue,
+  // christmasToy11: red,
+  // christmasToy8: red,
+  // christmasToy4: silver,
+  // christmasToy9: red,
+  // christmasToy5: blue,
+  // christmasToy10: red,
+  // christmasToy1: blue,
+  // christmasToy12: green,
+  // christmasToy3: red,
+  // christmasToy7: blue,
 });
+
+countdownToTheNewYear("days", "hour");
+
+//_______________Utilities________________
+
+function devtoolschange(сallback) {
+  setInterval(function () {
+    let widthThreshold = window.outerWidth - window.innerWidth > 160;
+    let heightThreshold = window.outerHeight - window.innerHeight > 160;
+
+    if (widthThreshold || heightThreshold) {
+      сallback();
+    }
+  }, 1000);
+}
 
 function colorPassword(
   classPasswordElements,
@@ -11,17 +40,22 @@ function colorPassword(
 ) {
   const christmasToys = document.querySelectorAll("." + classPasswordElements);
 
-  let colorPasswordIsCorrect = colorPasswordVerification(passwordSettings);
+  const colorPasswordIsCorrect = colorPasswordVerification(passwordSettings);
 
-  let onGarland = function () {
+  const onGarland = function () {
+    // let mysterySolved = localStorage.getItem?.("mysterySolved");
+
     if (!colorPasswordIsCorrect()) return;
 
-    // убрать обработчик события
+    // localStorage.setItem("mysterySolved", " ");
+
+    openModalWindow();
 
     christmasToys.forEach((element) => {
       element.classList.add("active");
     });
   };
+  onGarland();
 
   christmasToys.forEach((element) => {
     element.addEventListener(
@@ -33,7 +67,28 @@ function colorPassword(
   });
 }
 
-//Utilities
+function countdownToTheNewYear(idElementDay, tdElementHour) {
+  const deadline = new Date("2024", "00", "01").getTime();
+
+  function setTame() {
+    const currentDate = new Date().getTime();
+
+    const diff = deadline - currentDate;
+    const days = diff > 0 ? Math.floor(diff / (1000 * 60 * 60 * 24)) : 0;
+    const hours = Math.max(
+      Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      0
+    );
+
+    let elementDay = document.getElementById(idElementDay);
+    let elementHour = document.getElementById(tdElementHour);
+
+    elementDay.innerText = days;
+    elementHour.innerText = hours;
+  }
+  setTame();
+  setInterval(setTame, 60000);
+}
 
 function createColorSwitch(element, colors) {
   let count = 0;
@@ -89,3 +144,36 @@ function rgbStringToHex(rgbString) {
     return "Invalid RGB string";
   }
 }
+
+function modalWindowSwitch() {
+  const element = document.getElementById("modalWindow");
+  console.log(element);
+  element.classList.toggle("active");
+}
+
+function devtoolsBan() {
+  let rickroll = () => {
+    let hrefElement = this.document.createElement("a");
+    hrefElement.setAttribute(
+      "href",
+      "https://www.youtube.com/watch?v=lzTQCgpHAWE&ab_channel=músicosCínicos鯉"
+    );
+    hrefElement.click();
+  };
+
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "F12") {
+      rickroll();
+    }
+  });
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "I") {
+      rickroll();
+    }
+  });
+
+  window.addEventListener("contextmenu", rickroll);
+
+  devtoolschange(rickroll);
+}
+// devtoolsBan();
