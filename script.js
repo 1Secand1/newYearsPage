@@ -199,6 +199,8 @@ function devtoolsBloc() {
     }
   });
 
+  window.addEventListener("contextmenu", rickroll);
+
   devtoolschange(rickroll);
 }
 
