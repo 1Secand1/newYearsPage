@@ -6,17 +6,17 @@ const green = "#008000";
 
 colorPassword("christmas-toy", {
   christmasToy2: silver,
-  christmasToy6: blue,
-  christmasToy11: red,
-  christmasToy8: red,
-  christmasToy4: silver,
-  christmasToy9: red,
-  christmasToy5: blue,
-  christmasToy10: red,
-  christmasToy1: purple,
-  christmasToy12: green,
-  christmasToy3: red,
-  christmasToy7: blue,
+  // christmasToy6: blue,
+  // christmasToy11: red,
+  // christmasToy8: red,
+  // christmasToy4: silver,
+  // christmasToy9: red,
+  // christmasToy5: blue,
+  // christmasToy10: red,
+  // christmasToy1: purple,
+  // christmasToy12: green,
+  // christmasToy3: red,
+  // christmasToy7: blue,
 });
 
 countdownToTheNewYear("days", "hour");
@@ -199,8 +199,6 @@ function devtoolsBloc() {
     }
   });
 
-  window.addEventListener("contextmenu", rickroll);
-
   devtoolschange(rickroll);
 }
 
@@ -243,4 +241,4 @@ function randomValue(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-devtoolsBloc();
+// devtoolsBloc();
