@@ -201,7 +201,7 @@ function devtoolsBloc() {
 
   window.addEventListener("contextmenu", rickroll);
 
-  devtoolschange(rickroll);
+  // devtoolschange(rickroll);
 }
 
 function devtoolschange(сallback) {
